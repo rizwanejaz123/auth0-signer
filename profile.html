@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Your App</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">User Profile</span>
+            <form action="/profile" method="post">
+              <div class="input-field">
+                <input id="name" type="text" name="name" required value="John Doe">
+                <label for="name" class="active">Full Name</label>
+              </div>
+              <div class="input-field">
+                <input id="email" type="email" name="email" required value="john.doe@example.com">
+                <label for="email" class="active">Email</label>
+              </div>
+              <div class="input-field">
+                <input id="paypal" type="email" name="paypal" required value="paypal@example.com">
+                <label for="paypal" class="active">PayPal Email</label>
+              </div>
+              <button type="submit" class="btn waves-effect waves-light">Update Profile</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Materialize JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      M.updateTextFields(); // Initialize Materialize components
+    });
+  </script>
+</body>
+</html>
+
